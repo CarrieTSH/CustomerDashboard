@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 
 #read the files and pre-process the data
-customers_info=pd.read_csv('customers.csv')
+customers_info=pd.read_csv('customers.csv',encoding='ISO-8859-1')
 orders_info=pd.read_csv('orders.csv',encoding='ISO-8859-1')
 
 country_counts = customers_info['country'].value_counts().reset_index()
