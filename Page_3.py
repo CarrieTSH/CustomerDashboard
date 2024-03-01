@@ -28,7 +28,7 @@ navigation_items = {
     "Customers Dash":"None"
 }
 
-image = 'northwindlogo.png'
+image = 'streamlit.png'
 st.sidebar.image(image, use_column_width=True)
 
 #sidebar customization
