@@ -28,6 +28,9 @@ navigation_items = {
     "Customers Dash":"None"
 }
 
+image = 'northwindlogo.png'
+st.sidebar.image(image, use_column_width=True)
+
 #sidebar customization
 with st.sidebar:
     st.title('👤 Customers')
