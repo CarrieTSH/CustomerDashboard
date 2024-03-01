@@ -1,13 +1,11 @@
 import pandas as pd
 import streamlit as st
-import numpy as np
 import plotly.express as px
 import altair as alt
-import pydeck as pk
 
 #read the files and pre-process the data
-customers_info=pd.read_csv(r'C:\Users\Admin\Desktop\课件\Data science with Python\Northwind+Traders\Northwind Traders\customers.csv',encoding='ISO-8859-1')
-orders_info=pd.read_csv(r'C:\Users\Admin\Desktop\课件\Data science with Python\Northwind+Traders\Northwind Traders\orders.csv',encoding='ISO-8859-1')
+customers_info=pd.read_csv('customers.csv')
+orders_info=pd.read_csv('orders.csv',encoding='ISO-8859-1')
 
 country_counts = customers_info['country'].value_counts().reset_index()
 country_counts.columns = ['country', 'count']
