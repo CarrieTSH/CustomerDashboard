@@ -20,9 +20,19 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
+#navigation function
+navigation_items = {
+    "Homepage": "https://sales-app-homepage1.streamlit.app/",
+    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+}
+
 #sidebar customization
 with st.sidebar:
     st.title('👤 Customers')
+    st.write("## Navigation")
+    for item, url in navigation_items.items():
+        st.markdown(f"[ {item} ]({url})", unsafe_allow_html=True)
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 #make a stacked column chart to show top10 customers who had ordered the most in 2013-2015
@@ -88,4 +98,3 @@ st.plotly_chart(Top10_customers_fig, use_container_width=True)
 st.subheader('Customer Distribution🌍')
 st.plotly_chart(customer_distribution, use_container_width=True)
 
-#adjust the layout of the map
