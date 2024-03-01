@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import altair as alt
 
 #read the files and pre-process the data
 customers_info=pd.read_csv('customers.csv')
@@ -20,8 +19,6 @@ st.set_page_config(
     page_icon="👤",
     layout="wide",
     initial_sidebar_state="expanded")
-
-alt.themes.enable("dark")
 
 #sidebar customization
 with st.sidebar:
